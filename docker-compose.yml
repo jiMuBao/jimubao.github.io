@@ -4,7 +4,7 @@ services:
     image: "node:9.10.1"
     user: "node"
     container_name: 'cv'
-    working_dir: /home/node/app
+    working_dir: /home/node/app/my-cv
     environment:
       - NODE_ENV=production
     volumes:
@@ -12,5 +12,5 @@ services:
     ports:
       - "8080:3000"
     tty: true
-    # command: "npm start"
-    command: "node hello.js"
+    command: "npm start"
+    # command: "cd /home/node/app/my-cv;yarn start"
